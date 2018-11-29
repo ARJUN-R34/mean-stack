@@ -1,0 +1,49 @@
+#canvas-wrap {
+  height: 100%;
+}
+
+#canvas-wrap .container {
+  height: 100%;
+}
+
+#services {
+  background-color: #f8f5f0;
+}
+
+.row .feature:hover {
+  box-shadow: 3px 3px 10px #ccc;
+  transform: translateY(-10px);
+}
+
+.background {
+  background-color: #f9f9f9;
+}
+
+.background:hover {
+  background-color: #f2f2f2;
+}
+
+#arjun {
+  height: 100%;
+}
+
+.masthead {
+  height: 100%;
+}
+
+section#about {
+  background-color: #f8f9fa;
+}
+
+section#team {
+  background-color: #000;
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+}
+
+section#about {
+  padding-top: 40px;
+}
