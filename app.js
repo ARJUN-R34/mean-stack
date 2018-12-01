@@ -8,7 +8,8 @@ var nav=[
       {link:'/index',title:'Home'},
       {link:'/aboutus',title:'About Us'},
       {link:'/categories',title:'Categories'},
-      {link:'/contactus',title:'Contact Us'}
+      {link:'/contactus',title:'Contact Us'},
+      {link:'/addnew',title:'Add New Item'}
     ]
 
 const homeRouter=require('./src/routes/homeRoutes')(nav);
@@ -19,6 +20,7 @@ const laptopRouter=require('./src/routes/laptopRoutes')(nav);
 const mobileRouter=require('./src/routes/mobileRoutes')(nav);
 const menRouter=require('./src/routes/menRoutes')(nav);
 const womenRouter=require('./src/routes/womenRoutes')(nav);
+// const addRouter=require('./src/routes/addRoutes')(nav);
 
 app.use(express.static(path.join(__dirname,"/public")));
 app.use('/index',homeRouter)
@@ -29,6 +31,7 @@ app.use('/laptops',laptopRouter)
 app.use('/mobiles',mobileRouter)
 app.use('/mens',menRouter)
 app.use('/womens',womenRouter)
+// app.use('/addnew',addRouter)
 
 app.get('/',function(req,res){
   res.render('index',{

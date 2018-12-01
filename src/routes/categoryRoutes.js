@@ -17,26 +17,26 @@ function router(nav) {
         });
       });
 
-      categoryRouter.route('/mobiles')
-        .get((req,res)=>{
-          res.render('mobiles',{
-            nav
-          });
+    categoryRouter.route('/mobiles')
+      .get((req,res)=>{
+        res.render('mobiles',{
+          nav
         });
+      });
 
-        categoryRouter.route('/mens')
-          .get((req,res)=>{
-            res.render('mens',{
-              nav
-            });
-          });
+    categoryRouter.route('/mens')
+      .get((req,res)=>{
+        res.render('mens',{
+          nav
+        });
+      });
 
-          categoryRouter.route('/womens')
-            .get((req,res)=>{
-              res.render('womens',{
-                nav
-              });
-            });
+    categoryRouter.route('/womens')
+      .get((req,res)=>{
+        res.render('womens',{
+          nav
+        });
+      });
 
     return categoryRouter;
 }
