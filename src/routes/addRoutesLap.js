@@ -2,17 +2,10 @@ const express=require('express');
 
 const LaptopData=require('../model/laptopdata');
 
-const addLapRouter=express.Router();
+const addRouterLap=express.Router();
 
 function router(nav) {
-  addLapRouter.route('/')
-    .get((req,res)=> {
-      res.render('addNewLaptop',{
-        nav
-      });
-    });
-
-  addLapRouter.route('/addnewlap/add')
+  addRouterLap.route('/')
     .get((req,res)=>{
       var item={
         brand: req.param("brand"),
@@ -21,10 +14,10 @@ function router(nav) {
       }
       var laptop=new LaptopData(item);
       laptop.save();
-      res.redirect('/laptops')
+      res.redirect('/categories/laptops')
     });
 
-  return addLapRouter;
+  return addRouterLap;
 }
 
 module.exports=router;
