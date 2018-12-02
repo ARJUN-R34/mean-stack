@@ -35,11 +35,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
-            <% for(var i=0;i<nav.length;i++) {%>
+            <% for(var i=0;i<nav.length-1;i++) {%>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="<%=nav[i].link%>"><%=nav[i].title%></a>
               </li>
             <%}%>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/laptops/addnewlap">Add New Laptop</a>
+            </li>
           </ul>
         </div>
       </div>
